@@ -1,0 +1,56 @@
+@import "media";
+
+$gutter: 20px;
+$cols: 12;
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$gutter / 2;
+    @for $i from 1 through $cols {
+        .col-#{$i}{
+            padding: $gutter / 2;
+            width: (100% / $cols) * $i;
+        }
+    }
+    @for $i from 1 through $cols {
+        @include xs{
+            .col-xs-#{$i}{
+                padding: $gutter / 2;
+                width: (100% / $cols) * $i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @include sm{
+            .col-sm-#{$i}{
+                padding: $gutter / 2;
+                width: (100% / $cols) * $i;
+            }
+        }
+    }
+    @for $i from 1 through $cols{
+        @include md{
+            .col-md-#{$i}{
+                padding: $gutter / 2;
+                width: (100% / $cols) * $i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @include lg{
+            .col-lg-#{$i}{
+                padding: $gutter / 2;
+                width: (100% / $cols) * $i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @include xl{
+            .col-xl-#{$i}{
+                padding: $gutter / 2;
+                width: (100% / $cols) * $i;
+            }
+        }
+    }
+}

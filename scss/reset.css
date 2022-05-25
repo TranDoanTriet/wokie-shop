@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+html,
+body,
+input,
+button {
+  font-family: 'Hind', sans-serif;
+}
+/*# sourceMappingURL=reset.css.map */

@@ -1,0 +1,55 @@
+$act-color: #629DFE;
+
+.active-color-blue {
+    color: $act-color;
+}
+
+.active-text-black {
+    font-size: 12px;
+    color: rgba(#191919, 0.8);
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+
+.mt-20 {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.active-smaller {
+    font-size: 12px;
+    color: #777777;
+}
+
+@mixin hover-color-blue {
+    transition: all 0.2s;
+
+    &:hover {
+        color: $act-color;
+    }
+}
+
+.hcblue {
+    transition: all 0.2s;
+
+    &:hover {
+        color: $act-color;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
