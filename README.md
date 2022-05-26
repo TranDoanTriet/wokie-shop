@@ -38,15 +38,14 @@ line-height: 1;
 </li>
 
 
-
-TOPS
-Awesome
-Beachwear
-Beige
-Cool New
-Dress
-Gap
-Guess
+ACCESSORIES
+Scarf Sale 13%
+Shirt
+Shoes
+Shorts
+Summer
+Sunglasses
+Vintage
 
 
 

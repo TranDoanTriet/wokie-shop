@@ -9,15 +9,30 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.2/font/bootstrap-icons.min.css"
         integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/reset.css">
     <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./scss/owl.carousel.min.css">
+    <link rel="stylesheet" href="./scss/owl.theme.default.min.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
+        <div class="search-form">
+            <div class="looking-for flex">
+                <span class="looking">What are you Looking for?</span>
+                <span class="off-looking">x</span>
+            </div>
+            <div class="looking-input flex">
+                <input type="text" placeholder="SEARCH PRODUCTS...">
+                <div class="btn-search">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+        </div>
         <div class="container flex">
+
             <!-- logo wookie -->
             <div class="logo">
                 <a class="logo-wokiee" href=""><img src="./img/Logo_wokiee.jpg" alt=""></a>
@@ -831,16 +846,35 @@
                                 </ul>
                             </div>
                             <!-- slide header -->
-                            <div class="col-6"></div>
+                            <div class="col-6">
+                                <div class="slide">
+                                    <div class="specials">Specials</div>
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item">
+                                            <img src="./img/trending/trend1.png" alt="">
+
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/trending/trend2.png" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/trending/trend3.png" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/trending/trend4.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <a href="" class="home-under">
+                                <a href="" class="home-under mt-20">
                                     <img src="./img/home-demo/home3.jpg" alt="">
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a href="" class="home-under">
+                                <a href="" class="home-under mt-20">
                                     <img src="./img/home-demo/home4.jpg" alt="">
                                 </a>
                             </div>
@@ -1088,29 +1122,70 @@
                     <button class="icon-interact">
                         <i class="bi bi-search"></i>
                     </button>
+                    <div class="icon_name">
+                        <span class="i_tagname">Search</span>
+                    </div>
                 </li>
                 <li class="icon icon-cart">
                     <span class="amount-products">0</span>
                     <button class="icon-interact">
                         <i class="bi bi-handbag"></i>
                     </button>
+                    <div class="icon_name">
+                        <span class="i_tagname">Cart</span>
+                    </div>
                 </li>
                 <li class="icon icon-user">
                     <button class="icon-interact">
                         <i class="bi bi-person"></i>
                     </button>
+                    <div class="icon_name">
+                        <span class="i_tagname">My account</span>
+                    </div>
                 </li>
                 <li class="icon icon-slide">
                     <button class="icon-interact">
                         <i class="bi bi-sliders"></i>
                     </button>
+                    <div class="icon_name">
+                        <span class="i_tagname">Setting</span>
+                    </div>
                 </li>
             </ul>
         </div>
     </header>
-    <div class="fakecontent"></div>
+    <div class="slider">
+        <div class="slide_base owl-carousel owl-theme">
+            <div class="slide_img">
+                <div class="slide_content flex">
+                    <span class="active-color-blue"> Multipurpose</span>
+                    <span class="premium">Premium Shopify Theme</span>
+                    <span class="premium_note">30 days skins, powerful features, great support exclusive offer</span>
+                    <button>shop now !</button>
+                </div>
+                <img src="./img/slider/slide1.jpg" alt="">
+            </div>
+            <div class="slide_img">
+                <div class="slide_content flex">
+                    <span class="active-color-blue text-white"> Ready To</span>
+                    <span class="premium text-white">Use <br> Unique Demos</span>
+                    <span class="premium_note">Optimized for speed, website that sell</span>
+                    <button>shop-now !</button>
+                </div>
+                <img src="./img/slider/slide2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="theme-selection">
+
+    </div>
+    <div class="abc">
+        <button class="addcart">add</button>
+
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./owl.carousel.min.js"></script>
 <script src="./main.js"></script>
 
 </html>

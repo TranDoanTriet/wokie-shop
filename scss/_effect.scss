@@ -11,6 +11,10 @@ $act-color: #629DFE;
     font-family: 'Hind', sans-serif;
 }
 
+.text-white {
+    color: white;
+}
+
 .mt-20 {
     margin-top: 20px;
     display: inline-block;
@@ -50,6 +54,38 @@ $act-color: #629DFE;
     justify-content: center;
 }
 
+.j-between {
+    justify-content: space-between;
+}
+
 .a-center {
     align-items: center;
+}
+
+.fadeIn {
+    animation: fadeIn 2s forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
