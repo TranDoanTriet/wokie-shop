@@ -107,6 +107,134 @@
   }
 }
 
+@-webkit-keyframes dropdown-appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdown-appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show-lazy-picture {
+  from {
+    top: -5px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes show-lazy-picture {
+  from {
+    top: -5px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes appearing {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes appearing {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes shop-now {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes shop-now {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes btn-slide {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes btn-slide {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes icon_header_move {
+  from {
+    -webkit-transform: translate(-50%, 5px);
+            transform: translate(-50%, 5px);
+  }
+  to {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes icon_header_move {
+  from {
+    -webkit-transform: translate(-50%, 5px);
+            transform: translate(-50%, 5px);
+  }
+  to {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1095,135 +1223,124 @@ header .container .header-icon-group .icon .icon-interact .bi:hover {
      object-fit: cover;
 }
 
+.theme-selection img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.theme-selection .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .theme-selection .grid-container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .theme-selection .grid-container .class2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+@media (max-width: 576px) {
+  .theme-selection .grid-container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    padding: 0;
+  }
+  .theme-selection .grid-container .class2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .theme-selection .grid-container .grid-item {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+  .theme-selection .grid-container .class1,
+  .theme-selection .grid-container .class2 {
+    -ms-grid-columns: unset !important;
+        grid-template-columns: unset !important;
+  }
+}
+
+.theme-selection .grid-container .class1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.theme-selection .grid-container .class1 .grid-item3 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.theme-selection .grid-container .class2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+.theme-selection .grid-container .class2 .grid-item6 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.theme-selection .grid-container .grid-item {
+  position: relative;
+  -o-object-fit: fill;
+     object-fit: fill;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-selection .grid-container .grid-item:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.theme-selection .grid-container .grid-item:hover .grid-theme {
+  background: #4a86e7;
+  color: white;
+}
+
+.theme-selection .grid-container .grid-item .grid-theme {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .abc {
   height: 1000px;
-}
-
-@-webkit-keyframes dropdown-appearing {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes dropdown-appearing {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes show-lazy-picture {
-  from {
-    top: -5px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes show-lazy-picture {
-  from {
-    top: -5px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes appearing {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes appearing {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@-webkit-keyframes shop-now {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@keyframes shop-now {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@-webkit-keyframes btn-slide {
-  from {
-    top: 100%;
-    opacity: 0;
-  }
-  to {
-    top: 50%;
-    opacity: 1;
-  }
-}
-
-@keyframes btn-slide {
-  from {
-    top: 100%;
-    opacity: 0;
-  }
-  to {
-    top: 50%;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes icon_header_move {
-  from {
-    -webkit-transform: translate(-50%, 5px);
-            transform: translate(-50%, 5px);
-  }
-  to {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-}
-
-@keyframes icon_header_move {
-  from {
-    -webkit-transform: translate(-50%, 5px);
-            transform: translate(-50%, 5px);
-  }
-  to {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
 }
 /*# sourceMappingURL=style.css.map */

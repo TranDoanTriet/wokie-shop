@@ -392,15 +392,15 @@ function showAmountProduct(amount) {
     }
 }
 showAmountProduct(amount_products)
-console.log(amount_products)
-$('.addcart').click(function (e) {
-    e.preventDefault();
-    amount_products += 1
-    // document.querySelector('.amount-products').textContent = amount_products
-    $('.amount-products').text(amount_products);
-    console.log(amount_products)
-    showAmountProduct(amount_products)
-});
+// console.log(amount_products)
+// $('.addcart').click(function (e) {
+//     e.preventDefault();
+//     amount_products += 1
+//     // document.querySelector('.amount-products').textContent = amount_products
+//     $('.amount-products').text(amount_products);
+//     console.log(amount_products)
+//     showAmountProduct(amount_products)
+// });
 
 
 
