@@ -72,6 +72,10 @@ $act-color: #629DFE;
     align-items: center;
 }
 
+.a-end {
+    align-items: flex-end;
+}
+
 .fadeIn {
     animation: fadeIn 2s forwards;
 }

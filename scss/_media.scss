@@ -4,24 +4,28 @@
         @content;
     }
 }
+
 //large
 @mixin lg {
     @media (min-width:992px) and (max-width:1200px) {
         @content;
     }
 }
+
 //medium
 @mixin md {
     @media (min-width:768px) and (max-width:992px) {
         @content;
     }
 }
+
 //small
 @mixin sm {
     @media (min-width:576px) and (max-width:768px) {
         @content;
     }
 }
+
 //extra small
 @mixin xs {
     @media (max-width:576px) {

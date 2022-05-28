@@ -73,6 +73,12 @@
           align-items: center;
 }
 
+.a-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .fadeIn {
   -webkit-animation: fadeIn 2s forwards;
           animation: fadeIn 2s forwards;
@@ -1835,6 +1841,7 @@ header .container .header-icon-group .icon .icon-interact .bi:hover {
 .theme-selection-3 .container .grid-item {
   position: relative;
   cursor: pointer;
+  margin-bottom: 120px;
 }
 
 .theme-selection-3 .container .grid-item:hover .content-t3 {
@@ -1900,6 +1907,266 @@ header .container .header-icon-group .icon .icon-interact .bi:hover {
 .theme-selection-3 .container .grid-item img {
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.IG {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.IG .follow-us {
+  font-size: 24px;
+}
+
+.IG .follow-us span a {
+  color: #629DFE;
+  text-decoration: underline;
+}
+
+.IG .instagram {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ig-img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .ig-img {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .ig-img {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+.ig-img .img-insta {
+  position: relative;
+}
+
+.ig-img .img-insta img {
+  height: 100%;
+}
+
+.ig-img .img-insta:hover .blur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ig-img .img-insta .blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  -webkit-animation: fadeIn 0.3s forwards;
+          animation: fadeIn 0.3s forwards;
+}
+
+.ig-img .img-insta .blur i {
+  color: white;
+}
+
+.services {
+  margin: 50px 0;
+}
+
+.services .container .ser-icon i {
+  font-size: 50px;
+  color: #2879fe;
+  cursor: pointer;
+}
+
+.services .container .service {
+  cursor: pointer;
+}
+
+.services .container .service span {
+  display: block;
+  margin-left: 20px;
+}
+
+.services .container .service span.up {
+  font-size: 16px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.services .container .service span.up:hover {
+  color: #629DFE;
+}
+
+.services .container .service span.down {
+  font-size: 13px;
+  color: #777777;
+}
+
+.contactUs {
+  background: #2879fe;
+  padding: 10px 0;
+}
+
+.contactUs .container .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactUs .container .in-touch {
+  color: white;
+  font-weight: 500;
+}
+
+.contactUs .container .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactUs .container .input-group input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.contactUs .container .input-group .btn-join {
+  background: #3e3e3e;
+  color: white;
+  padding: 0 20px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contactUs .container .input-group .btn-join:hover {
+  background: #222121;
+}
+
+.contactUs .container .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactUs .container .social-media i {
+  margin-left: 20px;
+  color: white;
+}
+
+.contactUs .container .social-media i:hover {
+  color: black;
+}
+
+.company-info {
+  padding: 50px 0;
+  background: #f9f5f5;
+}
+
+.company-info .lis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.company-info .lis p {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #4a4949;
+}
+
+.company-info .lis span {
+  font-size: 13px;
+  color: #777777;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.company-info .lis span.com-list {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.company-info .lis span.com-list:hover {
+  color: #629DFE;
+}
+
+footer {
+  margin: 20px 0;
+}
+
+footer .container .logo-wokiee {
+  margin-right: 10px;
+}
+
+footer .container .copyright {
+  color: #777777;
+  font-size: 14px;
+}
+
+footer .container .payment .pay {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: 5px;
+}
+
+footer .container .payment .pay:hover {
+  opacity: 0.5;
 }
 
 .abc {
