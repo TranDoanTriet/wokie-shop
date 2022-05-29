@@ -1,10 +1,3 @@
-//extra large
-@mixin xl {
-    @media (min-width:1200px) {
-        @content;
-    }
-}
-
 //large
 @mixin lg {
     @media (min-width:992px) and (max-width:1200px) {

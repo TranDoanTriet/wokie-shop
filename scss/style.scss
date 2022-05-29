@@ -23,6 +23,22 @@ header {
     width: 100vw;
     position: relative;
 
+    @include lg {
+        padding: 15px 25px 8px 25px;
+    }
+
+    @include md {
+        padding: 15px 25px 8px 25px;
+    }
+
+    @include sm {
+        padding: 15px 20px 8px 20px;
+    }
+
+    @include xs {
+        padding: 15px 15px 8px 15px;
+    }
+
     &.fixed-header {
         position: fixed;
         width: 100vw;
@@ -36,18 +52,30 @@ header {
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 51;
+        z-index: 100;
         background-color: white;
         padding: 40px 80px;
+
+        @include md {
+            padding: 20px 30px;
+        }
 
         .looking-input {
             padding: 10px 0;
             border-bottom: 1px solid rgb(191, 185, 185);
 
+            @include md {
+                padding: 0;
+            }
+
             input {
                 // border: 1px solid #333;
                 flex-grow: 1;
                 font-size: 20px;
+
+                @include md {
+                    font-size: 16px;
+                }
             }
 
             .btn-search {
@@ -61,7 +89,6 @@ header {
         }
 
         .looking-for {
-            // margin-bottom: 10px;
             justify-content: space-between;
 
             .looking {
@@ -84,11 +111,76 @@ header {
     .container {
         position: relative;
 
+        @include md {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include sm {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include xs {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-bar {
+            flex-direction: column;
+            display: none;
+            cursor: pointer;
+
+            @include md {
+                display: flex;
+            }
+
+            @include sm {
+                display: flex;
+            }
+
+            @include xs {
+                display: flex;
+            }
+
+            span {
+                width: 15px;
+                height: 3px;
+                background: #333;
+                margin-bottom: 3px;
+                border-radius: 3px;
+            }
+        }
+
         .logo {
             margin-right: 40px;
+
+            @include md {
+                margin-right: 0;
+            }
+
+            @include sm {
+                margin-right: 0;
+            }
+
+            @include xs {
+                margin-right: 0;
+            }
         }
 
         .header-category {
+            @include md {
+                display: none;
+            }
+
+            @include sm {
+                display: none;
+            }
+
+            @include xs {
+                display: none;
+            }
+
             .header-category-selection {
                 margin: 3px 20px 0 0;
 
@@ -257,9 +349,25 @@ header {
             margin-left: auto;
             @include hover-color-blue;
 
+            @include md {
+                margin-left: 0;
+            }
+
+            @include sm {
+                margin-left: 0;
+            }
+
+            @include xs {
+                margin-left: 0;
+            }
+
             .icon {
                 margin-left: 18px;
                 position: relative;
+
+                &:first-child {
+                    margin-left: 0;
+                }
 
                 &:hover {
                     .i_tagname {
@@ -269,6 +377,21 @@ header {
                     .icon_name {
                         display: block;
                         animation: icon_header_move 0.3s forwards;
+                    }
+                }
+
+                &.icon-user,
+                &.icon-slide {
+                    @include md {
+                        display: none;
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
+
+                    @include xs {
+                        display: none;
                     }
                 }
 
@@ -349,9 +472,88 @@ header {
     }
 }
 
+.header_hiden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    width: 270px;
+    height: 100vh;
+    z-index: 200;
+    overflow: auto;
+
+    .off_header_hiden {
+        cursor: pointer;
+        padding: 10px 27px;
+        font-size: 16px;
+        color: #777777;
+        border-bottom: 1px solid #e2dede;
+        font-weight: 600;
+    }
+
+    .hh-section {
+
+        .hh-name {
+            cursor: pointer;
+            padding: 9px 27px 9px 30px;
+
+            &:hover {
+                background: #e7e5e5;
+            }
+
+            li {
+                &:hover {
+                    a {
+                        color: $act-color;
+                    }
+                }
+
+                a {
+                    transition: 0.3s;
+                    color: #777777;
+                    font-size: 14px;
+                }
+            }
+
+            .hh-name-section {
+                display: flex;
+                justify-content: space-between;
+                transition: 0.3s;
+
+                &:hover {
+
+                    .name,
+                    i {
+                        color: $act-color;
+
+                    }
+                }
+
+                .name {
+                    font-size: 13px;
+                    color: rgb(73, 45, 53);
+                    font-weight: 600;
+                }
+            }
+
+            i {
+                font-size: 10px;
+            }
+
+            .hhn-sub {
+                padding-left: 10px;
+
+                .hhn-sub-list {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
+}
+
 .slider {
-    object-fit: cover;
-    position: relative;
+    // object-fit: cover;
     z-index: 1;
 
     .owl-theme .owl-nav [class*=owl-]:hover {
@@ -386,6 +588,18 @@ header {
             left: 50%;
             transform: translate(-50%, 50%);
 
+            @include xs {
+                display: none !important;
+            }
+
+            @include sm {
+                display: none !important;
+            }
+
+            @include md {
+                display: none !important;
+            }
+
             .owl-dot {
                 &.active {
                     span {
@@ -410,6 +624,10 @@ header {
         }
     }
 
+    .silde_img {
+        position: relative;
+    }
+
     .slide_base {
         .slide_content {
             flex-direction: column;
@@ -420,21 +638,39 @@ header {
             transform: translate(-50%, -50%);
 
             .active-color-blue {
-                font-size: 36px;
-                line-height: 70px;
+                font-size: 3vw;
+                line-height: 10vh;
+
+                @include xs {
+                    line-height: 4vh;
+                }
+
+                @include sm {
+                    line-height: 5vh;
+                }
+
+                @include md {
+                    line-height: 8vh;
+                }
             }
 
             .premium {
-                font-size: 70px;
-                line-height: 70px;
+                font-size: 5vw;
                 text-align: center;
-            }
+                line-height: 15vh;
 
-            .premium_note {
-                font-size: 15px;
-                line-height: 1.1;
-                margin-top: 18px;
-                color: rgb(77, 74, 74);
+                @include md {
+                    line-height: 10vh;
+                }
+
+                @include sm {
+                    line-height: 7vh;
+                }
+
+                @include xs {
+                    line-height: 5vh;
+                }
+
             }
 
             button {
@@ -442,12 +678,31 @@ header {
                 background: $act-color;
                 border-radius: 6px;
                 cursor: pointer;
-                padding: 15px 30px;
-                font-size: 12px;
+                padding: 2vh 3vw;
+                font-size: 1vw;
                 text-transform: uppercase;
-                margin-top: 30px;
+                margin-top: 2vh;
                 transition: all 0.3s;
                 font-weight: 600;
+
+                @include xs {
+                    font-size: 2vh;
+                }
+
+                @include sm {
+                    font-size: 2vh;
+                    padding: 1.5vh 2.5vw;
+                }
+
+                @include md {
+                    font-size: 2vh;
+                    padding: 1.5vh 2.5vw;
+                }
+
+                @include lg {
+                    font-size: 2vh;
+                    padding: 2vh 3vw;
+                }
 
                 &:hover {
                     background-color: #2879FE;
@@ -458,7 +713,6 @@ header {
         .slide_img {
             img {
                 width: 100vw;
-                // height: 100vh;
             }
         }
 
@@ -495,7 +749,6 @@ header {
 
         @include xs {
             grid-template-columns: auto;
-            padding: 20px;
 
             .class2 {
                 grid-row: 1/2;
@@ -571,6 +824,22 @@ header {
     padding-top: 50px;
 
     .container {
+        @include lg {
+            max-width: 768px;
+        }
+
+        @include md {
+            max-width: 540px;
+        }
+
+        @include sm {
+            max-width: 480px;
+        }
+
+        @include xs {
+            max-width: 300px;
+        }
+
         .title-group {
 
 
@@ -809,15 +1078,24 @@ header {
     //     height: 300px;
     // }
     .box {
-        width: 50vw;
-        height: 60vh;
         background: white;
         position: fixed;
+        max-height: 90vh;
+        max-width: 90vw;
+        overflow: auto;
         padding: 30px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 5px;
+
+        @include lg {
+            width: 65vw;
+        }
+
+        @include md {
+            width: 80vw;
+        }
 
         .box-info {
             height: 100%;
@@ -849,8 +1127,8 @@ header {
         }
 
         img {
-            width: 100%;
-            height: 100%;
+            width: 250px;
+            height: 300px;
         }
     }
 
@@ -1095,6 +1373,22 @@ header {
     margin: 50px 0;
 
     .container {
+        @include lg {
+            max-width: 768px;
+        }
+
+        @include md {
+            max-width: 700px;
+        }
+
+        @include sm {
+            max-width: 480px;
+        }
+
+        @include xs {
+            max-width: 400px;
+        }
+
         .ser-icon {
             i {
                 font-size: 50px;
@@ -1129,7 +1423,23 @@ header {
     background: #2879fe;
     padding: 10px 0;
 
+    @include sm {
+        display: none;
+    }
+
+    @include xs {
+        display: none;
+    }
+
     .container {
+        @include lg {
+            max-width: 768px;
+        }
+
+        @include md {
+            max-width: 700px;
+        }
+
         .row {
             align-items: center;
         }
@@ -1190,6 +1500,24 @@ header {
     padding: 50px 0;
     background: #f9f5f5;
 
+    @include sm {
+        display: none;
+    }
+
+    @include xs {
+        display: none;
+    }
+
+    .container {
+        @include lg {
+            max-width: 768px;
+        }
+
+        @include md {
+            max-width: 700px;
+        }
+    }
+
     .lis {
         display: flex;
         flex-direction: column;
@@ -1218,8 +1546,38 @@ footer {
     margin: 20px 0;
 
     .container {
+        @include lg {
+            max-width: 768px;
+        }
+
+        @include md {
+            max-width: 700px;
+        }
+
+        @include sm {
+            max-width: 480px;
+            flex-direction: column;
+        }
+
+        @include xs {
+            max-width: 400px;
+            flex-direction: column;
+        }
+
         .logo-wokiee {
             margin-right: 10px;
+        }
+
+        .f-c {
+            align-items: center;
+
+            @include sm {
+                flex-direction: column;
+            }
+
+            @include xs {
+                flex-direction: column;
+            }
         }
 
         .copyright {
@@ -1234,6 +1592,103 @@ footer {
 
                 &:hover {
                     opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+.company-respon {
+    background: #f7f8fa;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    .container {
+        @include sm {
+            max-width: 480px;
+        }
+
+        @include xs {
+            max-width: 400px;
+        }
+
+        .list {
+            .lis {
+                .show-group {
+                    cursor: pointer;
+                    border-bottom: 1px solid rgb(220, 217, 217);
+                    padding-top: 25px;
+
+                    &:hover {
+                        p {
+                            color: $act-color;
+                        }
+                    }
+
+                    p {
+                        font-weight: 600;
+                        color: rgb(74, 73, 73);
+                        transition: 0.3s;
+
+                    }
+
+                    .show-c-r {
+                        font-size: 20px;
+                        color: #777777;
+                        font-weight: 700;
+                    }
+                }
+
+                .our-info {
+                    flex-direction: column;
+
+                    // display: none;
+                    .input-group {
+                        display: flex;
+
+                        flex-direction: column;
+                        padding: 20px 0;
+
+                        input {
+                            flex-grow: 1;
+                            background-color: white;
+                            font-size: 16px;
+                            padding: 10px;
+                            border-bottom-left-radius: 3px;
+                            border-top-left-radius: 3px;
+                        }
+
+                        .btn-join {
+                            background: #2879fe;
+                            color: white;
+                            padding: 10px 20px;
+                            margin-top: 20px;
+                            border-bottom-right-radius: 3px;
+                            border-top-right-radius: 3px;
+                            transition: 0.3s;
+                            cursor: pointer;
+
+                            &:hover {
+                                background: rgb(34, 33, 33);
+                            }
+                        }
+
+                    }
+
+                    li {
+                        span {
+                            font-size: 13px;
+                            color: #777777;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+
+                            &.com-list {
+                                @include hover-color-blue
+                            }
+                        }
+                    }
                 }
             }
         }

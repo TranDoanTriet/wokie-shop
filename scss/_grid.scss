@@ -50,13 +50,4 @@ $cols: 12;
             }
         }
     }
-
-    @for $i from 1 through $cols {
-        @include xl {
-            .col-xl-#{$i} {
-                padding: $gutter / 2;
-                width: (100% / $cols) * $i;
-            }
-        }
-    }
 }
