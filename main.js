@@ -679,6 +679,7 @@ $('.hhns-2').each(function (idx, element) {
     })
 })
 
+$('.header_hiden').hide()
 $('.off_header_hiden').click(function (e) {
     e.preventDefault();
     $(this).parent().fadeOut()
